@@ -1,29 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @friend.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @friend.last_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @friend.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @friend.phone %>
-</p>
-
-<p>
-  <strong>Twitter:</strong>
+    <div class="p-5 mb-4 bg-light border rounded-3 container-fluid py-5">
+        <h1 class="display-5 fw-bold"><%= @friend.first_name %> <%= @friend.last_name %></h1>
+        <p>
+  <%= @friend.email %> <br/>
+  <%= @friend.phone %> <br/> 
   <%= @friend.twitter %>
 </p>
+<%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary btn-sm" %>
+<%= link_to 'Back', friends_path, class:"btn btn-dark btn-sm" %>
+      </div>
 
-<%= link_to 'Edit', edit_friend_path(@friend) %> |
-<%= link_to 'Back', friends_path %>
+
+
+
+
+
